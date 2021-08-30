@@ -16,7 +16,7 @@
             <option value="">All</option>
         </select>
     </div>
-    </header>
+</header>
 <div class="container">
     <div class="row">
         <di class="albums-col">
