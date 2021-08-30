@@ -19,23 +19,21 @@
 </header>
 <div class="container">
     <div class="row">
-        <di class="albums-col">
-            <?php 
-
+        <?php 
             require_once __DIR__ . "/database/database.php";
             foreach($database as $item) {
                 echo
-                "<div class=\"inner-container\">
-                    <img class=\"album-img\" src=\"{$item['poster']}\" alt=\"image of {$item['title']}\">
-                    <div class=\"title my-3\">{$item['title']}</div>
-                    <div class=\"author\">{$item['author']}</div>
-                    <div class=\"year\">{$item['year']}</div>
+                "<div class=\"albums-col\">
+                    <div class=\"inner-container\">
+                        <img class=\"album-img\" src=\"{$item['poster']}\" alt=\"image of {$item['title']}\">
+                        <div class=\"title my-3\">{$item['title']}</div>
+                        <div class=\"author\">{$item['author']}</div>
+                        <div class=\"year\">{$item['year']}</div>
+                    </div>
                 </div>";
             };
+        ?>
 
-            ?>
-
-        </di>
 
     </div>
 </div>
