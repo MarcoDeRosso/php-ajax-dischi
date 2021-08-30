@@ -12,7 +12,7 @@
     <img src="./img/spotify-logo.png" alt="spotify-logo">
     <div>
         <label class="mx-2" for="genre">Cerca per genere:</label>
-        <select v-model="searchString" name="genre" @change="$emit('search', searchString)" class="me-2">
+        <select name="genre"  class="me-2">
             <option value="">All</option>
         </select>
     </div>
