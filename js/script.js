@@ -22,6 +22,12 @@ new Vue(
                   }
                 })
               },
+            getApi: function(){
+                axios.get(`'http://localhost/php-ajax-dischi/backend/api-filtered.php?genere=${this.checkedGenre}'`)
+                .then((response) => {
+                    this.discs = response.data;
+            }) 
+            }
         }
 
     }
