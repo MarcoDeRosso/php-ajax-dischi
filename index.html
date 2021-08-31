@@ -18,9 +18,9 @@
             <img src="./img/spotify-logo.png" alt="spotify-logo">
             <div>
                 <label class="mx-2" for="genre">Cerca per genere:</label>
-                <select @click="genreArray()" name="genre"  class="me-2">
+                <select @click="genreArray()" name="genre" v-model="checkedGenre" class="me-2">
                     <option value="">All</option>
-                    <option v-for="genre in genreList" :value="`${genre}`">{{genre}}</option>
+                    <option v-for="genre in genreList"  :value="`${genre}`">{{genre}}</option>
                 </select>
             </div>
         </header>

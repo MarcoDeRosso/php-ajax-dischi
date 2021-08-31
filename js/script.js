@@ -5,7 +5,8 @@ new Vue(
         el: '#app',
         data: {
             discs: [],
-            genreList:[]
+            genreList:[],
+            checkedGenre:''
         },
         created() {
             axios.get('http://localhost/php-ajax-dischi/backend/api.php')
