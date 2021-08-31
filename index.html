@@ -25,8 +25,8 @@
         </header>
         <div class="container">
             <div class="row">
-                    <div v-for="disc in discs" class="albums-col">
-                        <div class="inner-container">
+                <div v-for="disc in discs" class="albums-col">
+                    <div class="inner-container">
                         <img class="album-img" :src="disc.poster" :alt="`image of ${disc.title}`">
                         <div class="title my-3">{{disc.title}}</div>
                         <div class="author">{{disc.author}}</div>
