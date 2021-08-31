@@ -18,15 +18,25 @@
             <img src="./img/spotify-logo.png" alt="spotify-logo">
             <div>
                 <label class="mx-2" for="genre">Cerca per genere:</label>
-                <select @click="genreArray()" @click="getApi()" name="genre" v-model="checkedGenre" class="me-2">
+                <select @click="genreArray()" :change="getApi()" name="genre" v-model="checkedGenre" class="me-2">
                     <option value="">All</option>
-                    <option v-for="genre in genreList"  :value="`${genre}`">{{genre}}</option>
+                    <option v-for="genre in genreList" :value="`${genre}`">{{genre}}</option>
                 </select>
             </div>
         </header>
         <div class="container">
-            <div class="row">
+            <div v-if="filteredDiscs.length === 0" class="row">
                 <div v-for="disc in discs" class="albums-col">
+                    <div class="inner-container">
+                        <img class="album-img" :src="disc.poster" :alt="`image of ${disc.title}`">
+                        <div class="title my-3">{{disc.title}}</div>
+                        <div class="author">{{disc.author}}</div>
+                        <div class="year">{{disc.year}}</div>
+                    </div>
+                </div>
+            </div>
+            <div v-else class="row">
+                <div v-for="disc in filteredDiscs" class="albums-col">
                     <div class="inner-container">
                         <img class="album-img" :src="disc.poster" :alt="`image of ${disc.title}`">
                         <div class="title my-3">{{disc.title}}</div>
